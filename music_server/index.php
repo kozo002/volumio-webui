@@ -35,6 +35,7 @@
         })();
 
         var apiRequest = function(path, callback) {
+          var request = new XMLHTTPRequest();
           request.open("POST", location.origin +  path, true);
           request.addEventListener("readystatechange", function(e) {
             if (request.readyState === 4) {
